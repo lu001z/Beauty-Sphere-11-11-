@@ -194,9 +194,9 @@
     }
 
     .portfolio-wrapper {
-      width: 1197px;
-      height: auto;
-      background-color: #444; 
+      width: 100%;
+      max-width: 1197px;
+      background-color: #444;
       border-radius: 20px;
       padding: 20px;
       margin: 0 auto;
@@ -205,24 +205,25 @@
       align-items: center;
       justify-content: center;
       gap: 16px;
+      position: relative;
+      overflow: hidden;
     }
 
-   
+
     .carousel-viewport {
-      width: 100%;
-      max-width: 950px; 
+      width: 950px; 
       overflow: hidden;
       border-radius: 20px;
     }
 
-    
+
     .carousel-track {
       display: flex;
       gap: 16px;
       transition: transform 0.5s ease-in-out;
+      min-width: 100%; 
     }
 
-    
     .portfolio-item {
       flex: 0 0 297px;
       height: 384px;
@@ -233,6 +234,7 @@
       align-items: center;
       justify-content: center;
     }
+
 
    
     .portfolio-item img {
@@ -354,3 +356,128 @@
         padding: 20px;
         font-size: 14px;
     }
+@media (max-width: 1024px) {
+  nav {
+    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .master-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .photo-placeholder {
+    width: 90%;
+    height: auto;
+  }
+
+  .about-box {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .services-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .portfolio-wrapper {
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-viewport {
+    max-width: 100%;
+  }
+
+  .booking-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .booking-card {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .right-img,
+  .left-img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  nav {
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .master-info h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .portfolio-item {
+    flex: 0 0 100%;
+    height: auto;
+  }
+
+  .carousel-track {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  .portfolio-item {
+    scroll-snap-align: start;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .arrow.left {
+    left: 10px;
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+
+  .carousel-viewport {
+    position: relative;
+  }
+
+}
+@media (max-width: 600px) {
+  .portfolio-item {
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
+}
