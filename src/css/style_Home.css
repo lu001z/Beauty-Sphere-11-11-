@@ -47,7 +47,7 @@
 }
 
 .menu li a {
-  color: white;
+  color: rgba(255, 136, 6, 1);
   text-decoration: none;
   font-weight: bold;
 }
